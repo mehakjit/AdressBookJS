@@ -211,12 +211,14 @@ function deleteContact(fName,lName){
 function getCount(){
     return addressBookArray.reduce(count=> count+1,0);
 }
-
+function getPersonByCityOrState(city , state){
+    return addressBookArray.filter(contact=> contact.city==city||contact.state==state);
+}
 try{
 let addressBookData0 = new AddressBookData("Mehakjit", "Singh", "Streetabc", "Patiala", "Punjab", "147001", "91 9999999999", "mehak@gmail.com")
 let addressBookData1 = new AddressBookData("Test", "Test", "Streetabc", "Testcity", "Testsate", "151001", "91 9999999998", "test@gmail.com");
 let addressBookData2 = new AddressBookData("Testfirst", "Testfrist", "Streetabcd", "Testcityfirst", "Testsatefirst", "151002", "91 9999999997", "test1@gmail.com");
-addDetails(addressBookData);
+addDetails(addressBookData0);
 addDetails(addressBookData1);
 addDetails(addressBookData2);
 }
@@ -224,8 +226,11 @@ catch(e){
     console.log(e);
 }
 console.log(addressBookArray);
-editDetails("Test","Test");
-deleteContact("Test","Test");
-console.log("after deletion")
-console.log(addressBookArray);
+// editDetails("Test","Test");
+// deleteContact("Test","Test");
+// console.log("after deletion")
+// console.log(addressBookArray);
 console.log("Total contacts: " + getCount())
+console.log(getPersonByCityOrState("Patiala", "Punjab"))
+console.log(getPersonByCityOrState("Patiala", "Teststate"))
+console.log(getPersonByCityOrState("0", "Teststate"))
