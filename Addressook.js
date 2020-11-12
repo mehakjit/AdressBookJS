@@ -200,10 +200,10 @@ function deleteContact(fName,lName){
 }
 
 try{
-let addressBookData = new AddressBookData("Mehakjit", "Singh", "Streetabc", "Patiala", "Punjab", "147001", "91 9999999999", "mehak@gmail.com")
+let addressBookData0 = new AddressBookData("Mehakjit", "Singh", "Streetabc", "Patiala", "Punjab", "147001", "91 9999999999", "mehak@gmail.com")
 let addressBookData1 = new AddressBookData("Test", "Test", "Streetabc", "Testcity", "Testsate", "151001", "91 9999999998", "test@gmail.com");
 let addressBookData2 = new AddressBookData("Testfirst", "Testfirst", "Streetabcd", "Testcityfirst", "Testsatefirst", "151002", "91 9999999997", "test1@gmail.com");
-addressBookArray.push(addressBookData);
+addressBookArray.push(addressBookData0);
 addressBookArray.push(addressBookData1);
 addressBookArray.push(addressBookData2);
 }
